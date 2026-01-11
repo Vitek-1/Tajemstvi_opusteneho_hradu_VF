@@ -1,12 +1,7 @@
 public class Sword extends Item {
-    @Override
-    public String getName() {
-        return "";
-    }
 
-    @Override
-    public String getDescription() {
-        return "";
+    public Sword(String name, String description) {
+        super(name, description);
     }
 
     @Override

@@ -1,12 +1,7 @@
 public class Ring extends Item {
-    @Override
-    public String getName() {
-        return "";
-    }
 
-    @Override
-    public String getDescription() {
-        return "";
+    public Ring(String name, String description) {
+        super(name, description);
     }
 
     @Override

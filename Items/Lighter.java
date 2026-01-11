@@ -1,12 +1,7 @@
 public class Lighter extends Item {
-    @Override
-    public String getName() {
-        return "";
-    }
 
-    @Override
-    public String getDescription() {
-        return "";
+    public Lighter(String name, String description) {
+        super(name, description);
     }
 
     @Override

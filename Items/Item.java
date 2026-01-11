@@ -2,8 +2,10 @@ public abstract class Item {
     protected String name;
     protected String description;
 
-    public abstract String getName();
-    public abstract String getDescription();
+    public Item(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
     public abstract void use(Player player, Console game);
 }

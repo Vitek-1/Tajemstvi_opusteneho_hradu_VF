@@ -1,12 +1,7 @@
 public class GoldenKey extends Item {
-    @Override
-    public String getName() {
-        return "";
-    }
 
-    @Override
-    public String getDescription() {
-        return "";
+    public GoldenKey(String name, String description) {
+        super(name, description);
     }
 
     @Override
