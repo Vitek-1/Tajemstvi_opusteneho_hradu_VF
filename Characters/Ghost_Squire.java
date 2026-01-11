@@ -1,8 +1,7 @@
 public class Ghost_Squire extends Character {
 
-    @Override
-    public String getName() {
-        return "";
+    public Ghost_Squire(String name, String description) {
+        super(name, description);
     }
 
     @Override

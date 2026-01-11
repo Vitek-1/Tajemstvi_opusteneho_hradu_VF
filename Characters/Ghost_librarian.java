@@ -1,8 +1,7 @@
 public class Ghost_librarian extends Character {
 
-    @Override
-    public String getName() {
-        return "";
+    public Ghost_librarian(String name, String description) {
+        super(name, description);
     }
 
     @Override
