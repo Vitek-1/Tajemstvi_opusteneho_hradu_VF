@@ -14,6 +14,8 @@ public class Room {
 
     }
 
+    private void createRooms(){}
+
     public String getName() {
         return null;
     }
