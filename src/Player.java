@@ -10,9 +10,9 @@ public class Player {
         return null;
     }
 
-    public void setCurrentRoom(Room room) {
+    public void setCurrentRoom(Room room) {}
 
-    }
+    private void createPlayer(){}
 
     public Inventar getInventory() {
         return null;
