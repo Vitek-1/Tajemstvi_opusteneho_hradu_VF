@@ -1,5 +1,8 @@
 package Characters;
 
+import Command.Console;
+import Hrac.Player;
+
 public abstract class Character {
 
     protected String name;

@@ -1,5 +1,8 @@
 package Characters;
 
+import Command.Console;
+import Hrac.Player;
+
 public class Ghost_librarian extends Character {
 
     public Ghost_librarian(String name, String description) {
@@ -10,4 +13,5 @@ public class Ghost_librarian extends Character {
     public void talk(Player player, Console game) {
 
     }
+
 }

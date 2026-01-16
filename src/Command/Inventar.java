@@ -1,18 +1,16 @@
 package Command;
 
+import Hrac.Item;
+
 import java.util.HashMap;
 
 public class Inventar extends Command {
 
-    private HashMap<String, Item> items;
+    private HashMap<Integer, Item> items;
 
-    public void addItem(Item item) {
+    public void addItem(Item item) {}
 
-    }
-
-    public void removeItem(String name) {
-
-    }
+    public void removeItem(String name) {}
 
     public Item getItem(String name) {
         return null;
