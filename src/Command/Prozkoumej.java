@@ -1,4 +1,6 @@
-public class Jdi extends Command {
+package Command;
+
+public class Prozkoumej extends Command {
 
     @Override
     public String execute() {

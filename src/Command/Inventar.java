@@ -1,3 +1,5 @@
+package Command;
+
 import java.util.HashMap;
 
 public class Inventar extends Command {

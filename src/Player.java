@@ -1,3 +1,5 @@
+import Command.Inventar;
+
 public class Player {
     private Room currentRoom;
     private Inventar inventar;

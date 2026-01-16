@@ -1,4 +1,6 @@
-public class Pouzij extends Command {
+package Command;
+
+public class Jdi extends Command {
 
     @Override
     public String execute() {

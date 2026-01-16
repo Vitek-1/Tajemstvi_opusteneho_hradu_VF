@@ -1,4 +1,6 @@
-public class Prozkoumej extends Command {
+package Command;
+
+public class Mluv extends Command {
 
     @Override
     public String execute() {

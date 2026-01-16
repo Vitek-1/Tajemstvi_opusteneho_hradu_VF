@@ -1,4 +1,6 @@
-public class Mluv extends Command {
+package Command;
+
+public class Vezmi extends Command {
 
     @Override
     public String execute() {

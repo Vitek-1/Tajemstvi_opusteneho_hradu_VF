@@ -1,3 +1,5 @@
+import Characters.Character;
+
 import java.util.HashMap;
 
 public class Room {
@@ -6,15 +8,18 @@ public class Room {
 
     private HashMap<String, Room> exits;
     private HashMap<String, Item> items;
-    private HashMap<String, Character> characters;
+    private HashMap<String, Characters.Character> characters;
 
     private boolean locked;
 
     public Room(String name, String description) {
-
+        this.name = name;
+        this.description = description;
     }
 
-    private void createRooms(){}
+    private void createRooms(){
+
+    }
 
     public String getName() {
         return null;
@@ -44,7 +49,7 @@ public class Room {
 
     }
 
-    public void addCharacter(Character character) {
+    public void addCharacter(Characters.Character character) {
 
     }
 

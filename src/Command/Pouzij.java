@@ -1,4 +1,6 @@
-public class Vezmi extends Command {
+package Command;
+
+public class Pouzij extends Command {
 
     @Override
     public String execute() {
