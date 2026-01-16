@@ -1,3 +1,8 @@
+package Command;
+
+import Hrac.Player;
+import Hrac.Room;
+
 import java.util.HashMap;
 
 public class Console{

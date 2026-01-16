@@ -1,3 +1,5 @@
+package Hrac;
+
 import Command.Inventar;
 
 public class Player {

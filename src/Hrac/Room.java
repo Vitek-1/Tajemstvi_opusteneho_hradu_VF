@@ -1,3 +1,5 @@
+package Hrac;
+
 import Characters.Character;
 
 import java.util.HashMap;
@@ -7,8 +9,6 @@ public class Room {
     private String description;
 
     private HashMap<String, Room> exits;
-    private HashMap<String, Item> items;
-    private HashMap<String, Characters.Character> characters;
 
     private boolean locked;
 
@@ -29,32 +29,16 @@ public class Room {
         return null;
     }
 
-    public void addExit(String name, Room room) {
-
-    }
+    public void addExit(String name, Room room) {}
 
     public Room getExit(String name) {
         return null;
     }
 
-    public void addItem(Item item) {
-
-    }
-
-    public Item getItem(String name) {
-        return null;
-    }
-
-    public void removeItem(String name) {
-
-    }
+    public void addItem(Item item) {}
 
     public void addCharacter(Characters.Character character) {
 
-    }
-
-    public Character getCharacter(String name) {
-        return null;
     }
 
     public boolean isLocked() {
