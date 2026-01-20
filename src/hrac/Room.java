@@ -1,7 +1,10 @@
-package Hrac;
+package hrac;
 
-import Characters.Character;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 public class Room {
@@ -18,7 +21,16 @@ public class Room {
     }
 
     private void createRooms(){
-
+        ObjectMapper mapper = new ObjectMapper();
+         try{
+             InputStream input = new FileInputStream("resources/rooms.json");
+             Character character = mapper.readValue(input, Character.class);
+             System.out.println(character);
+         } catch (FileNotFoundException e) {
+             throw new RuntimeException(e);
+         } catch (Exception e) {
+             throw new RuntimeException(e);
+         }
     }
 
     public String getName() {
@@ -37,7 +49,7 @@ public class Room {
 
     public void addItem(Item item) {}
 
-    public void addCharacter(Characters.Character character) {
+    public void addCharacter(characters.Character character) {
 
     }
 

@@ -1,7 +1,7 @@
-package Command;
+package command;
 
-import Hrac.Player;
-import Hrac.Room;
+import hrac.Player;
+import hrac.Room;
 
 import java.util.HashMap;
 

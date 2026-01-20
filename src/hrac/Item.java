@@ -1,8 +1,6 @@
-package Hrac;
+package hrac;
 
-import Command.Console;
-
-import java.util.ArrayList;
+import command.Console;
 
 public class Item {
     private String name;

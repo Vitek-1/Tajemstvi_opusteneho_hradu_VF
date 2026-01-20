@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-import Hrac.Item;
+import hrac.Item;
 
 import java.util.HashMap;
 

@@ -1,6 +1,6 @@
-package Hrac;
+package hrac;
 
-import Command.Inventar;
+import command.Inventar;
 
 public class Player {
     private Room currentRoom;

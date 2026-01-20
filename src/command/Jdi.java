@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-public class Vezmi extends Command {
+public class Jdi extends Command {
 
     @Override
     public String execute() {

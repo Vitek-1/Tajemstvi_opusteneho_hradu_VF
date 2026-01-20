@@ -1,7 +1,7 @@
-package Characters;
+package characters;
 
-import Command.Console;
-import Hrac.Player;
+import command.Console;
+import hrac.Player;
 
 public abstract class Character {
 
