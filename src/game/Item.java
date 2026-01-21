@@ -1,4 +1,4 @@
-package hrac;
+package game;
 
 import command.Console;
 

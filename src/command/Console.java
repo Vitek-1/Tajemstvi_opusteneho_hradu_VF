@@ -1,7 +1,7 @@
 package command;
 
-import hrac.Player;
-import hrac.Room;
+import game.Player;
+import game.Room;
 
 import java.util.HashMap;
 

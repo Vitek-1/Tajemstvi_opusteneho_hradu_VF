@@ -1,6 +1,6 @@
 package command;
 
-import hrac.Item;
+import game.Item;
 
 import java.util.HashMap;
 
