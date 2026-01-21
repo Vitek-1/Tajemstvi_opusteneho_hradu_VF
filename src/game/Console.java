@@ -1,7 +1,4 @@
-package command;
-
-import game.Player;
-import game.Room;
+package game;
 
 import java.util.HashMap;
 
