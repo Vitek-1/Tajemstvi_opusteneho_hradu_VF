@@ -22,16 +22,23 @@ public class Jdi extends Command {
         System.out.print("Napis mi nazev mistnosti kam chces jit: ");
         String idCile = sc.next();
 
-        try{
+        try {
             Room novaMistnost = gameData.findRoomById(idCile);
-            player.setCurrentRoom(novaMistnost);
-            System.out.println("Nachazis se v "+player.getCurrentRoom().getName() +"\nPopis: " + player.getCurrentRoom().getDescription());
-
-        }catch (IllegalArgumentException e) {
+            if (!player.getCurrentRoom().getId().equals(idCile)) {
+                if (player.getCurrentRoom().neighbour(idCile)) {
+                    player.setCurrentRoom(novaMistnost);
+                    System.out.println("Nachazíš se v " + player.getCurrentRoom().getName() + "\nPopis: " + player.getCurrentRoom().getDescription());
+                } else {
+                    return "Nelze jít do této místnosti";
+                }
+            } else {
+                return "Proč bys chodil do stejný místnosti???";
+            }
+        } catch (IllegalArgumentException e) {
             // Pokud findRoomById nenajde místnost, vyhodí chybu (viz tvůj GameData)
             return "Místnost s názvem '" + idCile + "' neexistuje.";
         }
-        return "trouba hahah";
+        return "Přesun do jiné místnosti byl úspěšný";
     }
 
     @Override
