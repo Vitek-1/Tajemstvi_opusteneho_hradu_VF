@@ -15,30 +15,30 @@ public class Room {
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public String getDescription() {
-        return null;
-    }
-
-    public void addExit(String name, Room room) {}
-
-    public Room getExit(String name) {
-        return null;
-    }
-
-    public void addItem(Item item) {}
-
-    public void addCharacter(characters.Character character) {
-
+        return description;
     }
 
     public boolean isLocked() {
-        return false;
+        return locked;
     }
 
     public void unlock() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", locked=" + locked +
+                ", items=" + items +
+                ", neighbours=" + neighbours +
+                '}';
     }
 }

@@ -8,6 +8,9 @@ public class Inventar extends Command {
 
     private HashMap<Integer, Item> items;
 
+    public Inventar() {
+    }
+
     public void addItem(Item item) {}
 
     public void removeItem(String name) {}
