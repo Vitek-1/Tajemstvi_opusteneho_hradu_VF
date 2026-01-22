@@ -1,7 +1,7 @@
 package characters;
 
-import command.Console;
-import hrac.Player;
+import game.Console;
+import game.Player;
 
 public class Ghost_librarian extends Character {
 
