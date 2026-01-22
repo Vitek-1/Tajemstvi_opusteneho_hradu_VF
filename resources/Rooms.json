@@ -1,1 +1,106 @@
-"kousek": deset
+{
+  "rooms": [
+    {
+      "id": "nadvori",
+      "name": "Nádvoří",
+      "description": "Rozlehlé hradní nádvoří s hlavní branou.",
+      "locked": false,
+      "items": [
+        null
+      ],
+      "neighbours": [
+        "hrad_sin",
+        "loznice",
+        "vez",
+        "labyrint",
+        "knihovna",
+        "sklep"
+      ]
+    },
+    {
+      "id": "vez",
+      "name": "Věž",
+      "description": "Vysoká hradní věž.",
+      "locked": true,
+      "items": [
+        "prsten"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "loznice",
+      "name": "Ložnice",
+      "description": "Starobylá místnost s manželskou postelí.",
+      "locked": false,
+      "items": [
+        "zapalovac"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "hrad_sin",
+      "name": "Hradní_síň",
+      "description": "Veliký prostorný sál a honosným trůnem.",
+      "locked": false,
+      "items": [
+        null
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "labyrint",
+      "name": "Labyrint",
+      "description": "Hodně spletité bludiště.",
+      "locked": false,
+      "items": [
+        "svicka"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "knihovna",
+      "name": "Knihovna",
+      "description": "Knihovna s hodně knihami pokryté tlustou přikrývkou prachu",
+      "locked": false,
+      "items": [
+        null
+      ],
+      "neighbours": [
+        "nadvori",
+        "tajna_mistnost"
+      ]
+    },
+    {
+      "id": "tajna_mistnost",
+      "name": "Tajná místnost",
+      "description": "Tajemná temná malá místnost.",
+      "locked": true,
+      "items": [
+        "mec"
+      ],
+      "neighbours": [
+        "knihovna"
+      ]
+    },
+    {
+      "id": "sklep",
+      "name": "Sklep",
+      "description": "Temná místnost ve které není nic vidět.",
+      "locked": false,
+      "items": [
+        "stara_kniha"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    }
+  ]
+}
