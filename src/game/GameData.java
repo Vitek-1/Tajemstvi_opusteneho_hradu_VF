@@ -1,7 +1,7 @@
 package game;
 
 import com.google.gson.Gson;
-import com.sun.tools.javac.Main;
+
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -34,8 +34,7 @@ public class GameData {
 
             // Ověření, zda soubor existuje
             if (is == null) {
-                throw new IllegalStateException(
-                        "Nenalezen resource: " + resourcePath +
+                throw new IllegalStateException("Nenalezen resource: " + resourcePath +
                                 " (zkontrolujte, že soubor je ve složce resources)."
                 );
             }
@@ -52,6 +51,7 @@ public class GameData {
                     "Chyba při načítání JSON: " + e.getMessage()
             );
         }
+
     }
 
     /**
@@ -61,7 +61,6 @@ public class GameData {
      * @return the matching room
      */
     public Room findRoomById(String id) {
-
         // Procházení seznamu místností
         for (Room room : rooms) {
             if (room.getId().equals(id)) {
