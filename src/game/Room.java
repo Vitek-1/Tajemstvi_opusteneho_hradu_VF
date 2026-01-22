@@ -9,6 +9,7 @@ public class Room {
     private boolean locked;
     private ArrayList<String> items;
     private ArrayList<String> neighbours;
+    private GameData gameData;
 
     public String getId() {
         return id;
@@ -20,6 +21,15 @@ public class Room {
 
     public String getDescription() {
         return description;
+    }
+
+    public boolean neighbour(String id) {
+        for (String neighbour : neighbours) {
+            if (neighbour.equals(id)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isLocked() {
@@ -38,7 +48,7 @@ public class Room {
                 ", description='" + description + '\'' +
                 ", locked=" + locked +
                 ", items=" + items +
-                ", neighbours=" + neighbours +
+                ", neighbours=" + neighbours + "\n"+
                 '}';
     }
 }
