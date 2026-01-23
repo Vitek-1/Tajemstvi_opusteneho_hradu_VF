@@ -68,7 +68,7 @@
     {
       "id": "knihovna",
       "name": "Knihovna",
-      "description": "Knihovna s hodně knihami pokryté tlustou přikrývkou prachu",
+      "description": "V knihovně se hodně strých knih pokryté tlustou přikrývkou prachu",
       "locked": false,
       "items": [
         null
