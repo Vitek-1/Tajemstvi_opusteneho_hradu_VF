@@ -5,6 +5,10 @@ import command.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Class for creating menu
+ */
+
 public class Console{
     private Player player;
     private GameData gameData;
@@ -14,6 +18,10 @@ public class Console{
 
     public Console(){}
 
+    /**
+     * Method for putting commands into hash map
+     */
+
     private void inicializace() {
         mapa.put("jdi", new Jdi(this.player, this.gameData));
         mapa.put("inventar", new Inventar());
@@ -22,6 +30,10 @@ public class Console{
         mapa.put("prozkumej", new Prozkoumej());
         mapa.put("vezmi", new Vezmi());
     }
+
+    /**
+     * Method for creating command line
+     */
 
     private void proved() {
         System.out.print(">> ");
@@ -34,6 +46,10 @@ public class Console{
             System.out.println(">> Nedefinovany prikaz");
         }
     }
+
+    /**
+     * Method for rtarting game loop
+     */
 
     public void start() {
         gameData = GameData.loadGameDataFromResources("/Rooms.json");

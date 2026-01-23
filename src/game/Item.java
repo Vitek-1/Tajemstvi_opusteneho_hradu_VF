@@ -1,7 +1,5 @@
 package game;
 
-import command.Console;
-
 public class Item {
     private String name;
     private String description;
