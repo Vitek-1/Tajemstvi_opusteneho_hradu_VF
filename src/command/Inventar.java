@@ -1,35 +1,18 @@
 package command;
 
-import game.Item;
-
-import java.util.HashMap;
+import game.Player;
 
 public class Inventar extends Command {
 
-    private HashMap<Integer, Item> items;
+    private Player player;
 
-    public Inventar() {
-    }
-
-    public void addItem(Item item) {}
-
-    public void removeItem(String name) {}
-
-    public Item getItem(String name) {
-        return null;
-    }
-
-    public boolean contains(String name) {
-        return false;
-    }
-
-    public void showInventory() {
-
+    public Inventar(Player player) {
+        this.player = player;
     }
 
     @Override
     public String execute() {
-        return "";
+        return "Inventář: " + player.showInventory();
     }
 
     @Override
