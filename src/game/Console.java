@@ -24,11 +24,11 @@ public class Console{
 
     private void inicializace() {
         mapa.put("jdi", new Jdi(this.player, this.gameData));
-        mapa.put("inventar", new Inventar());
+        mapa.put("inventar", new Inventar(this.player));
         mapa.put("mluv", new Mluv());
         mapa.put("pouzij", new Pouzij());
-        mapa.put("prozkumej", new Prozkoumej());
-        mapa.put("vezmi", new Vezmi());
+        mapa.put("prozkoumej", new Prozkoumej(this.player));
+        mapa.put("help", new Help(this.mapa));
     }
 
     /**
@@ -54,8 +54,7 @@ public class Console{
     public void start() {
         gameData = GameData.loadGameDataFromResources("/Rooms.json");
         Room startovni_room = gameData.findRoomById("nadvori");
-        Inventar startovniInventar = new Inventar();
-        this.player = new Player(startovni_room, startovniInventar,true);
+        this.player = new Player(startovni_room, true);
         inicializace();
         try {
             do {
