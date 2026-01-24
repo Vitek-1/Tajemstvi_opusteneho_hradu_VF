@@ -5,12 +5,7 @@ import game.Player;
 
 public abstract class Character {
 
-    protected String name;
-    protected String description;
-
-    public Character(String name, String description) {
-        this.name = name;
-        this.description = description;
+    public Character() {;
     }
 
     public abstract void talk(Player player, GameData gamedata);
