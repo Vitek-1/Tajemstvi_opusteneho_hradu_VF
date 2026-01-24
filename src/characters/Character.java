@@ -1,6 +1,6 @@
 package characters;
 
-import game.Console;
+import game.GameData;
 import game.Player;
 
 public abstract class Character {
@@ -13,6 +13,6 @@ public abstract class Character {
         this.description = description;
     }
 
-    public abstract void talk(Player player, Console game);
+    public abstract void talk(Player player, GameData gamedata);
 
 }
