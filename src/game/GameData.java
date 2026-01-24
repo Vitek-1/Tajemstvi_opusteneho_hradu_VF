@@ -17,6 +17,8 @@ public class GameData {
 
     // Seznam všech místností herního světa
     public ArrayList<Room> rooms;
+    public static final String WINE = "\u001B[1m";
+    public static final String RESET = "\u001B[0m";
 
     /**
      * Loads game data from a JSON file located in the resources folder.
@@ -72,5 +74,33 @@ public class GameData {
         throw new IllegalArgumentException(
                 "Neexistuje místnost s id: " + id
         );
+    }
+
+    public String intro(){
+        System.out.println("--------------- " + WINE + "TAJEMSTVÍ OPUŠTĚNÉHO HRADU" + RESET + "---------------");
+        return """
+                Vítej ve hře, nacházíš se v ložnici na dávno opuštěném hradě.
+                Tvým úkolem je utéct ze zámku hlavní branou za pomocí zlatého klíče.
+                Pro zobrazení všech příkazů použij komand: 'pomoc' ale nejprve stiskno Enter
+                
+                
+                           |>>>                      |>>>
+                           |                         |
+                       _  _|_  _                 _  _|_  _
+                      | |_| |_| |               | |_| |_| |
+                      \\         /               \\         /
+                       |       |                 |       |
+                       |   _   |_________________|   _   |
+                       |  |_|  |                 |  |_|  |
+                       |       |    _________    |       |
+                       |       |   /         \\   |       |
+                       |       |  /           \\  |       |
+                       |_______| |      _      | |_______|
+                       |         |     | |     |         |
+                       |         |     |_|     |         |
+                       |_________|_____________|_________|
+                
+                                  Hodně štěstí.
+                """;
     }
 }
