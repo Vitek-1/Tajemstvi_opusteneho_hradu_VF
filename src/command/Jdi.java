@@ -28,31 +28,36 @@ public class Jdi extends Command {
 
     @Override
     public String execute() {
-        boolean keca = false;
+        boolean keca = true;
+        String idCile;
 
         do {
-            System.out.print("Napis mi nazev mistnosti kam chces jit: ");
-            String idCile = sc.next();
+            System.out.print("Napis mi nazev mistnosti kam chces jit (pokud nikam 0): ");
+            idCile = sc.next();
 
             try {
-                Room novaMistnost = gameData.findRoomById(idCile);
-                if (!player.getCurrentRoom().getId().equals(idCile)) {
-                    if (player.getCurrentRoom().neighbour(idCile) && !gameData.findRoomById(idCile).isLocked()) {
-                        player.setCurrentRoom(novaMistnost);
-                        System.out.println("Nachazíš se v " + player.getCurrentRoom().getName() + "\nPopis: " + player.getCurrentRoom().getDescription());
-                        keca = true;
+                if (!idCile.equals("0")) {
+                    Room novaMistnost = gameData.findRoomById(idCile);
+                    if (!player.getCurrentRoom().getId().equals(idCile)) {
+                        if (player.getCurrentRoom().neighbour(idCile) && !gameData.findRoomById(idCile).isLocked()) {
+                            player.setCurrentRoom(novaMistnost);
+                            keca = false;
+                        } else {
+                            System.out.println("Nelze jít do této místnosti.\n");
+                        }
                     } else {
-                        System.out.println("Nelze jít do této místnosti\n");
+                        System.out.println("Proč bys chodil do stejné místnosti???\n");
                     }
-                } else {
-                    System.out.println("Proč bys chodil do stejné místnosti???\n");
                 }
-
-            }catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage() + "\n");
             }
-        } while (!keca);
-        return "Přesun do místnosti " + player.getCurrentRoom().getName() + " byl úspěšný";
+        } while (keca && !idCile.equals("0"));
+        if (!idCile.equals("0")) {
+            return "Přesun do místnosti " + player.getCurrentRoom().getName() + " byl úspěšný\n";
+        } else {
+            return "Přesun byl zrušen!\n";
+        }
     }
 
     @Override
