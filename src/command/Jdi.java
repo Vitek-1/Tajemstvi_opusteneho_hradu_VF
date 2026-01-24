@@ -7,8 +7,8 @@ import game.Room;
 import java.util.Scanner;
 
 /**
-* This class is for moving to different room
-*/
+ * This class is for moving to different room
+ */
 
 public class Jdi extends Command {
     Player player;
@@ -20,33 +20,38 @@ public class Jdi extends Command {
         this.gameData = gameData;
     }
 
-        /**
-         * Method that move player to room
-         * @return result of move
-         */
+    /**
+     * Method that move player to room
+     *
+     * @return result of move
+     */
 
     @Override
     public String execute() {
+        boolean keca = false;
 
-        System.out.print("Napis mi nazev mistnosti kam chces jit: ");
-        String idCile = sc.next();
+        do {
+            System.out.print("Napis mi nazev mistnosti kam chces jit: ");
+            String idCile = sc.next();
 
-        try {
-            Room novaMistnost = gameData.findRoomById(idCile);
-            if (!player.getCurrentRoom().getId().equals(idCile)) {
-                if (player.getCurrentRoom().neighbour(idCile) && !gameData.findRoomById(idCile).isLocked()) {
-                    player.setCurrentRoom(novaMistnost);
-                    System.out.println("Nachazíš se v " + player.getCurrentRoom().getName() + "\nPopis: " + player.getCurrentRoom().getDescription());
+            try {
+                Room novaMistnost = gameData.findRoomById(idCile);
+                if (!player.getCurrentRoom().getId().equals(idCile)) {
+                    if (player.getCurrentRoom().neighbour(idCile) && !gameData.findRoomById(idCile).isLocked()) {
+                        player.setCurrentRoom(novaMistnost);
+                        System.out.println("Nachazíš se v " + player.getCurrentRoom().getName() + "\nPopis: " + player.getCurrentRoom().getDescription());
+                        keca = true;
+                    } else {
+                        System.out.println("Nelze jít do této místnosti\n");
+                    }
                 } else {
-                    return "Nelze jít do této místnosti";
+                    System.out.println("Proč bys chodil do stejné místnosti???\n");
                 }
-            } else {
-                return "Proč bys chodil do stejné místnosti???";
+
+            }catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage() + "\n");
             }
-        } catch (IllegalArgumentException e) {
-            // Pokud findRoomById nenajde místnost, vyhodí chybu (viz tvůj GameData)
-            return "Místnost s názvem '" + idCile + "' neexistuje.";
-        }
+        } while (!keca);
         return "Přesun do místnosti " + player.getCurrentRoom().getName() + " byl úspěšný";
     }
 
