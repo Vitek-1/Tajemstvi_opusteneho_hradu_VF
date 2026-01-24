@@ -5,14 +5,16 @@ import java.util.Scanner;
 
 public class Player {
     private Room currentRoom;
+    private GameData gameData;
     private ArrayList<String> items;
     private boolean alive;
     private Scanner sc = new Scanner(System.in);
 
-    public Player(Room currentRoom, boolean alive) {
+    public Player(Room currentRoom, boolean alive, GameData gameData) {
         this.currentRoom = currentRoom;
         this.alive = alive;
         this.items = new ArrayList<>();
+        this.gameData = gameData;
     }
 
     public Room getCurrentRoom() {
@@ -21,6 +23,28 @@ public class Player {
 
     public void setCurrentRoom(Room room) {
         this.currentRoom = room;
+        System.out.println(getCurrentRoom().getDescription());
+        if (currentRoom.getId().equals("bludiste")) {
+            sc.nextLine();
+            System.out.print("\nStojíš před vstupem do temného labyrintu. Podle plánku z ložnice víš, že jediná chybná odbočka tě vyvede zpět na nádvoří.\nNepiš nesmysly a zadej sérii směrů (např. sever, jih...), abys našel cestu k cíli\n" + room.labyrintPlanWithout() + "\nOdpoved: ");
+            String cesta = sc.nextLine();
+
+            if (cesta.equalsIgnoreCase("vychod, jih, vychod, jih, vychod, sever, vychod")) {
+                System.out.println("Úspěšně jsi prošel bludištěm a na jeho konci jsi našel svíčku opatrně jsi jí zvedl a vložil jsi jí do kapsy\n");
+                items.add("svicka");
+                room.removeItem("svicka");
+            } else {
+                System.out.println("Bohužel jsis kód zapamatoval špatně vrať se až ho budeš znát.\n");
+                currentRoom = gameData.findRoomById("nadvori");
+            }
+        } else if (currentRoom.getId().equals("loznice")) {
+            System.out.println("\nVidíš: \n" + currentRoom.labyrintPlan());
+            sc.nextLine();
+        }
+    }
+
+    public void addItem(String nazev) {
+        items.add(nazev);
     }
 
     public void roomExplore() {
