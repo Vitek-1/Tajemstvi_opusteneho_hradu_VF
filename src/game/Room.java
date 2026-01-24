@@ -9,7 +9,6 @@ public class Room {
     private boolean locked;
     private ArrayList<String> items;
     private ArrayList<String> neighbours;
-    private GameData gameData;
 
     public String getId() {
         return id;
@@ -37,7 +36,21 @@ public class Room {
     }
 
     public void unlock() {
+    }
 
+    public void addItem(String item) {
+        items.add(item);
+    }
+    public void removeItem(String item) {
+        items.remove(item);
+    }
+
+    public String getCurrentItem(Integer id){
+        return items.get(id);
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
     }
 
     @Override
