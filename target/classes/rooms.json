@@ -1,0 +1,102 @@
+{
+  "rooms": [
+    {
+      "id": "nadvori",
+      "name": "Nádvoří",
+      "description": "Ocitl jsi se na rozlehlém nádvoří, kde se mezi popraskanou dlažbou dere k nebi divoký plevel a studený vítr se prohání prázdnými arkádami.",
+      "locked": false,
+      "items": [
+      ],
+      "neighbours": [
+        "hrad_sin",
+        "loznice",
+        "vez",
+        "bludiste",
+        "knihovna",
+        "sklep"
+      ]
+    },
+    {
+      "id": "vez",
+      "name": "Věž",
+      "description": "Stoupáš po točitých schodech, vzduch chladne a stěny vlhnou slizem.\nNahoře tě čeká kruhová komnata s probořenou střechou, kde měsíční světlo osvětluje prázdný kamenný trůn obklopený kostmi a rozbitými štíty.",
+      "locked": true,
+      "items": [
+        "prsten"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "loznice",
+      "name": "Ložnice",
+      "description": "Nacházíš se v ložnici z nočního stolku si vezmeš starý, ale funkční zapalovač a schováš ho do kapsy.\nPohledem k posteli zjistíš, že zpod proleželé matrace vykukuje obří zmuchlaný svitek.\nJe to ručně kreslený plánek bludiště s vyznačenou cestou k úniku!",
+      "locked": false,
+      "items": [
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "hrad_sin",
+      "name": "Hradní_síň",
+      "description": "Vstoupil jsi do nekonečných hradních síní, kde pod vysokou klenbou visí potrhané standarty a ze stěn tě sledují vybledlé portréty dávno mrtvých panovníků.\nPřímo uprostřed sálu se však ve vzduchu vznáší průsvitná postava ducha krále, jehož nehmotný plášť se nehnutě táhne po mramorové podlaze a jehož přísný pohled dává jasně najevo, že v těchto síních jsi jen nezvaným hostem.",
+      "locked": false,
+      "items": [
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "bludiste",
+      "name": "Labyrint",
+      "description": "Vstoupil jsi do spletitých úzkých uliček tvořených vysokými živými ploty, které jsou tak husté, že skrze ně nepronikne ani paprsek světla.",
+      "locked": false,
+      "items": [
+        "svicka"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    },
+    {
+      "id": "knihovna",
+      "name": "Knihovna",
+      "description": "Vstoupil jsi do obrovského sálu, kde regály sahají až do neviditelných výšin a tisíce starých hřbetů knih vytvářejí nekonečné stěny vědění.\nUprostřed této tiché říše, skloněný nad masivním dubovým pultem, se vznáší průsvitný duch knihovníka, jehož kostnaté prsty neustále listují prázdným vzduchem, jako by marně hledal jednu jedinou, dávno ztracenou knihu.",
+      "locked": false,
+      "items": [
+      ],
+      "neighbours": [
+        "nadvori",
+        "tajna_mistnost"
+      ]
+    },
+    {
+      "id": "tajna_mist",
+      "name": "Tajná místnost",
+      "description": "Uprostřed místnosti, zabodnutý v prastarém kamenném bloku, se leskne ztracený meč – jeho čepel vypadá, jako by ji ukovali ze samotných hvězd a jen čeká na ruku hrdiny, který ho pozvedne proti stínům věže.",
+      "locked": true,
+      "items": [
+        "mec"
+      ],
+      "neighbours": [
+        "knihovna"
+      ]
+    },
+    {
+      "id": "sklep",
+      "name": "Sklep",
+      "description": "Sestoupil jsi po kluzkých schodech do hlubin sklepa, kde jediným zvukem je rytmické odkapávání vody ze stropu do hlubokých kaluží na podlaze.\nV záři tvé svíčky se ze tmy vynořují masivní dřevěné sudy obrostlé bílou plísní a těžké železné řetězy upevněné ke stěnám, které naznačují, že toto místo nesloužilo jen k uchovávání vína.",
+      "locked": true,
+      "items": [
+        "stara_kniha"
+      ],
+      "neighbours": [
+        "nadvori"
+      ]
+    }
+  ]
+}
