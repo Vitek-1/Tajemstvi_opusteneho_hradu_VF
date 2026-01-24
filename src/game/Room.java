@@ -36,6 +36,7 @@ public class Room {
     }
 
     public void unlock() {
+        locked = false;
     }
 
     public void addItem(String item) {
@@ -51,6 +52,43 @@ public class Room {
 
     public ArrayList<String> getItems() {
         return items;
+    }
+
+    public String labyrintPlan(){
+        return """
+                        [ PLÁNEK BLUDIŠTĚ ]
+                                 S
+                     _________________________
+                 Start * * * * |           |  |
+                    |  |_| | * |  _______  |  |
+                    |  |   | * | |  _    | |  |
+                    |  |  _| * |_| | |   | |  |
+                  Z |  | |   * * * | |   | |  |  V
+                    |  | |______ * | |___| |  |
+                    |  | _ _ _   * |     * * * Cíl
+                    |  |       | * |____ * |  |
+                    |  |       | * * * * * |  |
+                    |__|_______|___________|__|
+                                J
+                    * = cesta
+                """;
+    }
+
+    public String labyrintPlanWithout(){
+        return """
+                            [ BLUDIŠTĚ ]
+                     _________________________
+                               |           |  |
+                    |  |_| |   |  _______  |  |
+                    |  |   |   | |  _    | |  |
+                    |  |  _|   |_| | |   | |  |
+                    |  | |         | |   | |  |
+                    |  | |______   | |___| |  |
+                    |  | _ _ _     |
+                    |  |       |   |____   |  |
+                    |  |       |           |  |
+                    |__|_______|___________|__|
+                """;
     }
 
     @Override
