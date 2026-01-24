@@ -5,19 +5,19 @@ public class Map extends Command{
     public String execute() {
             return """
               +------------+     +---------+      / \\
-                 | Hradní síň |     | Ložnice |     | V |
-                 +-----+------+     +----+----+     | ě |
-                       |                 |          | ž |
+                 |  hrad_sin  |     | loznice |     | v |
+                 +-----+------+     +----+----+     | e |
+                       |                 |          | z |
        +----------+  +-+----------+------+------+   +---+
-       | Labyrint +--+         NÁDVOŘÍ          +--< BRÁNA
+       | bludiste +--+         nadvori          +--< BRÁNA
        +----------+  +-+-----------------+------+
                        |                 |
                  +-----+------+    +-----+-----+
-                 |  Knihovna  +    |   Sklep   |
+                 |  knihovna  +    |   sklep   |
                  +-----+------+    +-----------+
                        |
                 +------+-------+
-                | Tajná místn. |
+                |  tajna_mist. |
                 +--------------+
        """;
     }
