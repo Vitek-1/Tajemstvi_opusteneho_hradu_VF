@@ -81,7 +81,7 @@ public class GameData {
         return """
                 Vítej ve hře, nacházíš se v ložnici na dávno opuštěném hradě.
                 Tvým úkolem je utéct ze zámku hlavní branou za pomocí zlatého klíče.
-                Pro zobrazení všech příkazů použij komand: 'pomoc' ale nejprve stiskno Enter
+                Pro zobrazení všech příkazů použij komand: 'pomoc' ale nejprve stiskni Enter
                 
                 
                            |>>>                      |>>>

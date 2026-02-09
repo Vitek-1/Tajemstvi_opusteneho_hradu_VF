@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * Class for creating menu
+ * Class for creating game menu
  */
 
 public class Console{
@@ -61,7 +61,7 @@ public class Console{
     public void start() {
         gameData = GameData.loadGameDataFromResources("/rooms.json");
         Room startovni_room = gameData.findRoomById("loznice");
-        this.player = new Player(startovni_room, true, gameData);
+        this.player = new Player(startovni_room, gameData);
         player.addItem("zapalovac");
 
         System.out.print(gameData.intro());
@@ -89,8 +89,4 @@ public class Console{
             System.out.println(e.getMessage());
         }
     }
-
-    public void endGame(boolean victory){}
-
-    private void checkVictory(){}
 }

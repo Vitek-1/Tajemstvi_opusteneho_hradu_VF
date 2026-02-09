@@ -3,16 +3,18 @@ package game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * \this class is for creating player and for his methods
+ */
+
 public class Player {
     private Room currentRoom;
     private GameData gameData;
     private ArrayList<String> items;
-    private boolean alive;
     private Scanner sc = new Scanner(System.in);
 
-    public Player(Room currentRoom, boolean alive, GameData gameData) {
+    public Player(Room currentRoom, GameData gameData) {
         this.currentRoom = currentRoom;
-        this.alive = alive;
         this.items = new ArrayList<>();
         this.gameData = gameData;
     }
@@ -20,6 +22,11 @@ public class Player {
     public Room getCurrentRoom() {
         return currentRoom;
     }
+
+    /**
+     * This method is for setting players current room
+     * @param room needed here for room methods
+     */
 
     public void setCurrentRoom(Room room) {
         this.currentRoom = room;
@@ -46,6 +53,10 @@ public class Player {
     public void addItem(String nazev) {
         items.add(nazev);
     }
+
+    /**
+     * This method is for room exploring
+     */
 
     public void roomExplore() {
         int exit = 1;
@@ -95,6 +106,11 @@ public class Player {
         } while (exit == 1 && !getCurrentRoom().getItems().isEmpty());
     }
 
+    /**
+     * Deleting items
+     * @param name which item should be deleted
+     */
+
     public void removeItem(String name) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).equals(name)) {
@@ -102,6 +118,12 @@ public class Player {
             }
         }
     }
+
+    /**
+     * Checking if the player has current item in their inventory
+     * @param name of item
+     * @return Whether he has it or not
+     */
 
     public boolean contains(String name) {
         for (String item : items) {
@@ -115,12 +137,4 @@ public class Player {
     public String showInventory() {
         return items.toString();
     }
-
-    public boolean isAlive() {
-        return alive;
-    }
-
-    public void die() {
-    }
-
 }
