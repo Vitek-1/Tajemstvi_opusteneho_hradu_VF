@@ -22,6 +22,12 @@ public class Room {
         return description;
     }
 
+    /**
+     * Checking rooms neighbours
+     * @param id of current room
+     * @return is neighbour or not
+     */
+
     public boolean neighbour(String id) {
         for (String neighbour : neighbours) {
             if (neighbour.equals(id)) {
@@ -54,6 +60,11 @@ public class Room {
         return items;
     }
 
+    /**
+     * This Method is for writing plan of labirynt with shown path into console
+     * @return the plan
+     */
+
     public String labyrintPlan(){
         return """
                         [ PLÁNEK BLUDIŠTĚ ]
@@ -73,6 +84,11 @@ public class Room {
                     * = cesta
                 """;
     }
+
+    /**
+     * This Method is for writing plan of labirynt without path into console
+     * @return the plan
+     */
 
     public String labyrintPlanWithout(){
         return """

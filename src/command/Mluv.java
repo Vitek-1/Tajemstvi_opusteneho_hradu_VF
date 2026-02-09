@@ -6,6 +6,10 @@ import characters.Ghost_librarian;
 import game.GameData;
 import game.Player;
 
+/**
+ * This class is for start talk between player and npc
+ */
+
 public class Mluv extends Command {
 
     private Player player;
@@ -22,6 +26,11 @@ public class Mluv extends Command {
         this.gameData = gameData;
     }
 
+    /**
+     * This method check where is the player and choose the dialog
+     * @return dialog or there is no one to talk
+     */
+
     @Override
     public String execute() {
         switch (player.getCurrentRoom().getId()) {
@@ -34,9 +43,17 @@ public class Mluv extends Command {
             case "knihovna":
                 librarian.talk(player, gameData);
                 break;
+            default:
+                return "Nikdo zde není...";
         }
         return "";
     }
+
+
+    /**
+     * This method is here for checking end game
+     * @return false
+     */
 
     @Override
     public boolean exit() {

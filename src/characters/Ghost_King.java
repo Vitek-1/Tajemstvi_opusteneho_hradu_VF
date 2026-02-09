@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class Ghost_King is for creating king in the game
+ */
+
 public class Ghost_King extends Character {
 
     private Player player;
@@ -28,6 +32,12 @@ public class Ghost_King extends Character {
         this.player = player;
         this.gameData = gameData;
     }
+
+    /**
+     * This method talk is made for talking player with npc
+     * @param player for getting player methods
+     * @param gameData for getting gamedata
+     */
 
     @Override
     public void talk(Player player, GameData gameData) {
@@ -76,6 +86,11 @@ public class Ghost_King extends Character {
         }
     }
 
+    /**
+     * Method hadanky is for player to get the golden key for exit
+     * @return whether he succeeded
+     */
+
     private boolean hadanky() {
         int spravne = 0;
         int chybne = 0;
@@ -115,6 +130,12 @@ public class Ghost_King extends Character {
         }
         return true;
     }
+
+    /**
+     * This method is for changing colours in the console
+     * @param text input text from the dialogs
+     * @return writing into console coloured text
+     */
 
     private String obarviText(String text) {
         return text.replace("zlatý prsten", YELLOW + "zlatý prsten" + RESET)

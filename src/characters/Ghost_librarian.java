@@ -23,6 +23,12 @@ public class Ghost_librarian extends Character {
         this.gameData = gameData;
     }
 
+    /**
+     * This method talk is made for talking player with npc
+     * @param player for getting player methods
+     * @param gamedata for getting gamedata
+     */
+
     @Override
     public void talk(Player player, GameData gamedata) {
         if (player.contains("stara_kniha")){
@@ -43,6 +49,10 @@ public class Ghost_librarian extends Character {
         }
     }
 
+    /**
+     * This method loadData is for loading data from dialogs
+     */
+
     public void loadData(){
         try {
             InputStream isDialogy = getClass().getResourceAsStream("/dialogs.txt"); //
@@ -60,6 +70,12 @@ public class Ghost_librarian extends Character {
             System.out.println("Chyba při načítání dat: " + e.getMessage());
         }
     }
+
+    /**
+     * This method is for changing colours in the console
+     * @param text input text from the dialogs
+     * @return writing into console coloured text
+     */
 
     private String obarviText(String text) {
         return text.replace("vyrušeny!", RED + "vyrušeny!" + RESET);

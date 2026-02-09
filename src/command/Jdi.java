@@ -21,8 +21,7 @@ public class Jdi extends Command {
     }
 
     /**
-     * Method that move player to room
-     *
+     * That method is for moving player to different room
      * @return result of move
      */
 
@@ -59,6 +58,12 @@ public class Jdi extends Command {
             return "Přesun byl zrušen!\n";
         }
     }
+
+
+    /**
+     * This method is here for checking end game
+     * @return false
+     */
 
     @Override
     public boolean exit() {

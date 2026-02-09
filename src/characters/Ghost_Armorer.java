@@ -9,6 +9,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class Ghost_Armorer is for creating an armored enemy in the game
+ */
+
 public class Ghost_Armorer extends Character {
 
     private Player player;
@@ -23,6 +27,12 @@ public class Ghost_Armorer extends Character {
         this.player = player;
         this.gameData = gameData;
     }
+
+    /**
+     * This method talk is made for talking player with npc
+     * @param player for getting player methods
+     * @param gamedata for getting gamedata
+     */
 
     @Override
     public void talk(Player player, GameData gamedata) {
@@ -43,6 +53,10 @@ public class Ghost_Armorer extends Character {
         }
     }
 
+    /**
+     * This method loadData is for loading data from dialogs
+     */
+
     public void loadData() {
         try {
             InputStream isDialogy = getClass().getResourceAsStream("/dialogs.txt"); //
@@ -61,11 +75,22 @@ public class Ghost_Armorer extends Character {
         }
     }
 
+    /**
+     * This method is for changing colours in the console
+     * @param text input text from the dialogs
+     * @return writing into console coloured text
+     */
+
     private String obarviText(String text) {
         return text.replace("Stůj!", RED + "Stůj!" + RESET)
                 .replace("mrazivý dotek smrti", RED + "mrazivý dotek smrti" + RESET);
 
     }
+
+    /**
+     * This method is for killing the player
+     * @return that is the player killed or not
+     */
 
     public boolean killed() {
         if (count > 1) {
