@@ -16,7 +16,8 @@ import java.util.Scanner;
 public class Ghost_Armorer extends Character {
 
     private Player player;
-    private int count;
+    private boolean killed = false;
+    private int count = 0;
     private GameData gameData;
     private Scanner sc = new Scanner(System.in);
     private final ArrayList<String> dialogArmorer = new ArrayList<>();
@@ -43,13 +44,20 @@ public class Ghost_Armorer extends Character {
             player.removeItem("mec");
             gamedata.findRoomById("vez").unlock();
         } else {
+            count++;
+            if (count != 1){
+                killed = true;
+            }
+
             for (int i = 0; i < dialogArmorer.size() - 2; i++) {
                 if (!killed()) {
                     System.out.print(obarviText(dialogArmorer.get(i)));
                     sc.nextLine();
+                } else {
+                    System.out.println("Byl jsi zabit strážcem, který se rozmáchl svým obřím mečem a oddělil tvou hlavu od tvého těla :)");
+                    break;
                 }
             }
-            count++;
         }
     }
 
@@ -93,9 +101,6 @@ public class Ghost_Armorer extends Character {
      */
 
     public boolean killed() {
-        if (count > 1) {
-            return true;
-        }
-        return false;
+        return killed;
     }
 }

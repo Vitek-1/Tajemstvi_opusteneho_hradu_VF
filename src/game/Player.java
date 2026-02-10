@@ -8,12 +8,14 @@ import java.util.Scanner;
  */
 
 public class Player {
+    private String name;
     private Room currentRoom;
     private GameData gameData;
     private ArrayList<String> items;
     private Scanner sc = new Scanner(System.in);
 
-    public Player(Room currentRoom, GameData gameData) {
+    public Player(String name, Room currentRoom, GameData gameData) {
+        this.name = name;
         this.currentRoom = currentRoom;
         this.items = new ArrayList<>();
         this.gameData = gameData;

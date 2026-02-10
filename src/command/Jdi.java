@@ -42,7 +42,11 @@ public class Jdi extends Command {
                             player.setCurrentRoom(novaMistnost);
                             keca = false;
                         } else {
-                            System.out.println("Nelze jít do této místnosti.\n");
+                            if (novaMistnost.getId().equals("vez")) {
+                                System.out.println("Nelze jít do věže je hlídána duchem strážce zkus s ním promluvit, ale dej si POZOR...");
+                            } else {
+                                System.out.println("Nelze jít do této místnosti.\n");
+                            }
                         }
                     } else {
                         System.out.println("Proč bys chodil do stejné místnosti???\n");

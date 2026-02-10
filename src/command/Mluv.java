@@ -28,6 +28,7 @@ public class Mluv extends Command {
 
     /**
      * This method check where is the player and choose the dialog
+     *
      * @return dialog or there is no one to talk
      */
 
@@ -52,11 +53,11 @@ public class Mluv extends Command {
 
     /**
      * This method is here for checking end game
-     * @return false
+     * @return false or true dippends on the situation
      */
 
     @Override
     public boolean exit() {
-        return false;
+        return armorer.killed();
     }
 }

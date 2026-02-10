@@ -7,8 +7,8 @@ public class Room {
     private String name;
     private String description;
     private boolean locked;
-    private ArrayList<String> items;
-    private ArrayList<String> neighbours;
+    private ArrayList<String> items = new ArrayList<>();
+    private ArrayList<String> neighbours = new ArrayList<>();
 
     public String getId() {
         return id;

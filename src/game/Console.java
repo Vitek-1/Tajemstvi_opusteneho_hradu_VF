@@ -61,11 +61,15 @@ public class Console{
     public void start() {
         gameData = GameData.loadGameDataFromResources("/rooms.json");
         Room startovni_room = gameData.findRoomById("loznice");
-        this.player = new Player(startovni_room, gameData);
-        player.addItem("zapalovac");
 
         System.out.print(gameData.intro());
         scanner.nextLine();
+
+        System.out.println("Napiš jak se bude jmenovat tvoje postava: ");
+        String name =  scanner.next();
+        this.player = new Player(name, startovni_room, gameData);
+        player.addItem("zapalovac");
+
         System.out.println(player.getCurrentRoom().getDescription());
         scanner.nextLine();
 
