@@ -9,6 +9,11 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class Ghost_librarian is for creating librarian in to game
+ * @author vitek
+ */
+
 public class Ghost_librarian extends Character {
 
     private Player player;
@@ -27,6 +32,7 @@ public class Ghost_librarian extends Character {
      * This method talk is made for talking player with npc
      * @param player for getting player methods
      * @param gamedata for getting gamedata
+     * @author vitek
      */
 
     @Override
@@ -51,6 +57,7 @@ public class Ghost_librarian extends Character {
 
     /**
      * This method loadData is for loading data from dialogs
+     * @author vitek
      */
 
     public void loadData(){
@@ -75,6 +82,7 @@ public class Ghost_librarian extends Character {
      * This method is for changing colours in the console
      * @param text input text from the dialogs
      * @return writing into console coloured text
+     * @author vitek
      */
 
     private String obarviText(String text) {

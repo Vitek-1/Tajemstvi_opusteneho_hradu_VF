@@ -8,6 +8,7 @@ import game.Player;
 
 /**
  * This class is for start talk between player and npc
+ * @author vitek
  */
 
 public class Mluv extends Command {
@@ -28,8 +29,8 @@ public class Mluv extends Command {
 
     /**
      * This method check where is the player and choose the dialog
-     *
      * @return dialog or there is no one to talk
+     * @author vitek
      */
 
     @Override
@@ -54,6 +55,7 @@ public class Mluv extends Command {
     /**
      * This method is here for checking end game
      * @return false or true dippends on the situation
+     * @author vitek
      */
 
     @Override

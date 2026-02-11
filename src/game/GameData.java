@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * Represents the game data loaded from a JSON file.
  * This class serves as a data container for all static game content,
  * specifically the rooms and starting room of the game world.
+ * @author Maitnerova
  */
 public class GameData {
 
@@ -25,6 +26,7 @@ public class GameData {
      *
      * @param resourcePath path to the resource file
      * @return a GameData object filled with the loaded data
+     * @author Maitnerova
      */
     public static GameData loadGameDataFromResources(String resourcePath) {
 
@@ -61,6 +63,7 @@ public class GameData {
      *
      * @param id the identifier of the room to be found
      * @return the matching room
+     * @author Maitnerova
      */
     public Room findRoomById(String id) {
         // Procházení seznamu místností
@@ -75,6 +78,12 @@ public class GameData {
                 "Neexistuje místnost s id: " + id
         );
     }
+
+    /**
+     * This method is for writing info to player
+     * @return gemeral informations about game
+     * @author vitek
+     */
 
     public String intro(){
         System.out.println("--------------- " + WINE + "TAJEMSTVÍ OPUŠTĚNÉHO HRADU" + RESET + "---------------");

@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * This class Help is for writing all commands into console for player
+ * @author vitek
  */
 
 public class Help extends Command {
@@ -16,6 +17,7 @@ public class Help extends Command {
     /**
      * Just writing the commands into console
      * @return all commands
+     * @author vitek
      */
 
     @Override
@@ -26,6 +28,7 @@ public class Help extends Command {
     /**
      * This method is here for checking end game
      * @return false
+     * @author vitek
      */
 
     @Override

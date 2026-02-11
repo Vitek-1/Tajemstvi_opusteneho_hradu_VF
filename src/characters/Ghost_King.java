@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 /**
  * Class Ghost_King is for creating king in the game
+ * @author vitek
  */
 
 public class Ghost_King extends Character {
@@ -37,6 +38,7 @@ public class Ghost_King extends Character {
      * This method talk is made for talking player with npc
      * @param player for getting player methods
      * @param gameData for getting gamedata
+     * @author vitek
      */
 
     @Override
@@ -89,6 +91,7 @@ public class Ghost_King extends Character {
     /**
      * Method hadanky is for player to get the golden key for exit
      * @return whether he succeeded
+     * @author vitek
      */
 
     private boolean hadanky() {
@@ -135,6 +138,7 @@ public class Ghost_King extends Character {
      * This method is for changing colours in the console
      * @param text input text from the dialogs
      * @return writing into console coloured text
+     * @author vitek
      */
 
     private String obarviText(String text) {

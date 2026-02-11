@@ -5,6 +5,7 @@ import game.Player;
 
 /**
  * Class Character is for creating characters
+ * @author vitek
  */
 
 public abstract class Character {

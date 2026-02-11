@@ -4,6 +4,7 @@ import game.Player;
 
 /**
  * This class is for searching items into current location
+ * @author vitek
  */
 
 public class Prozkoumej extends Command {
@@ -17,6 +18,7 @@ public class Prozkoumej extends Command {
     /**
      * This method is for searching the items into locations
      * @return the result of searching
+     * @author vitek
      */
 
     @Override
@@ -32,6 +34,7 @@ public class Prozkoumej extends Command {
     /**
      * This method is here for checking end game
      * @return false
+     * @author vitek
      */
 
     @Override

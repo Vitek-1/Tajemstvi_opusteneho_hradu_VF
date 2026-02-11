@@ -4,6 +4,7 @@ import game.Player;
 
 /**
  * This class Inventar is for showing players inventory to him
+ * @author vitek
  */
 
 public class Inventar extends Command {
@@ -17,6 +18,7 @@ public class Inventar extends Command {
     /**
      * Writing all things that he has into his inventory into console
      * @return all his items
+     * @author vitek
      */
 
     @Override
@@ -27,6 +29,7 @@ public class Inventar extends Command {
     /**
      * This method is here for checking end game
      * @return false
+     * @author vitek
      */
 
     @Override

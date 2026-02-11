@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 /**
  * This class is for moving to different room
+ * @author vitek
  */
 
 public class Jdi extends Command {
@@ -23,6 +24,7 @@ public class Jdi extends Command {
     /**
      * That method is for moving player to different room
      * @return result of move
+     * @author vitek
      */
 
     @Override
@@ -67,6 +69,7 @@ public class Jdi extends Command {
     /**
      * This method is here for checking end game
      * @return false
+     * @author vitek
      */
 
     @Override

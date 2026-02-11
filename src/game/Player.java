@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * \this class is for creating player and for his methods
+ * @author vitek
  */
 
 public class Player {
@@ -28,6 +29,7 @@ public class Player {
     /**
      * This method is for setting players current room
      * @param room needed here for room methods
+     * @author vitek
      */
 
     public void setCurrentRoom(Room room) {
@@ -58,6 +60,7 @@ public class Player {
 
     /**
      * This method is for room exploring
+     * @author vitek
      */
 
     public void roomExplore() {
@@ -111,6 +114,7 @@ public class Player {
     /**
      * Deleting items
      * @param name which item should be deleted
+     * @author vitek
      */
 
     public void removeItem(String name) {
@@ -125,6 +129,7 @@ public class Player {
      * Checking if the player has current item in their inventory
      * @param name of item
      * @return Whether he has it or not
+     * @author vitek
      */
 
     public boolean contains(String name) {

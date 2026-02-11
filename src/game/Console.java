@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 /**
  * Class for creating game menu
+ * @author vitek
  */
 
 public class Console{
@@ -26,6 +27,7 @@ public class Console{
 
     /**
      * Method for putting commands into hash map
+     * @author vitek
      */
 
     private void inicializace() {
@@ -40,6 +42,7 @@ public class Console{
 
     /**
      * Method for creating command line
+     * @author vitek
      */
 
     private void proved() {
@@ -56,6 +59,7 @@ public class Console{
 
     /**
      * Method for starting game loop
+     * @author vitek
      */
 
     public void start() {

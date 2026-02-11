@@ -2,6 +2,7 @@ package command;
 
 /**
  * Class Map is for showing the entire map of the game
+ * @author vitek
  */
 
 public class Map extends Command{
@@ -9,6 +10,7 @@ public class Map extends Command{
     /**
      * This method is for writing the map into console
      * @return the map
+     * @author vitek
      */
     @Override
     public String execute() {
@@ -35,6 +37,7 @@ public class Map extends Command{
     /**
      * This method is here for checking end game
      * @return false
+     * @author vitek
      */
 
     @Override

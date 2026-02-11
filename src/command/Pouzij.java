@@ -5,6 +5,7 @@ import game.Player;
 
 /**
  * This class Pouzij is for using items into game
+ * @author vitek
  */
 
 public class Pouzij extends Command {
@@ -24,6 +25,7 @@ public class Pouzij extends Command {
     /**
      * this method check if player inventory contains current item and use them
      * @return some text about using item
+     * @author vitek
      */
 
     @Override
@@ -43,6 +45,7 @@ public class Pouzij extends Command {
     /**
      * This method is here for checking end game
      * @return konec
+     * @author vitek
      */
 
     @Override

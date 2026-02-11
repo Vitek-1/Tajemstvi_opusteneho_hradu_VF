@@ -2,6 +2,11 @@ package game;
 
 import java.util.ArrayList;
 
+/**
+ * Class Room is for creating rooms and their parameters
+ * @author vitek
+ */
+
 public class Room {
     private String id;
     private String name;
@@ -26,6 +31,7 @@ public class Room {
      * Checking rooms neighbours
      * @param id of current room
      * @return is neighbour or not
+     * @author vitek
      */
 
     public boolean neighbour(String id) {
@@ -63,6 +69,7 @@ public class Room {
     /**
      * This Method is for writing plan of labirynt with shown path into console
      * @return the plan
+     * @author vitek
      */
 
     public String labyrintPlan(){
@@ -88,6 +95,7 @@ public class Room {
     /**
      * This Method is for writing plan of labirynt without path into console
      * @return the plan
+     * @author vitek
      */
 
     public String labyrintPlanWithout(){
