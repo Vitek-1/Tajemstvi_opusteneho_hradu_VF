@@ -6,7 +6,7 @@ You woke up inside a locked castle without any idea how did you get there. Will 
 * You don't have to be Einstein to complete this game.🤓
 * Game map is loaded from ***JSON*** (easy to edit without code).
 
-## 📖 Owerview
+## 📖 Overview
 * This game is an advanced-level of text adventure game written in Java.
 * Player starts the game in bedroom🛏️.
 * Each room can contain items 🗝️.
@@ -19,7 +19,7 @@ My name is <ins>Vít Frolík</ins> and I am a second-year student at a high scho
 
 ### 🟢 If you have Intelij IDEA 🟢
 1. Download this [Zip document](https://github.com/Vitek-1/Tajemstvi_opusteneho_hradu_VF/archive/refs/heads/master.zip)
-2. Exstract all from the folder.
+2. Extract all from the folder.
 3. Open ***Intelij IDEA*** and open this project.
 4. Start this project into _main_ class.👌
 
