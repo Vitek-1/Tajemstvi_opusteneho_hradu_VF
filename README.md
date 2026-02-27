@@ -29,9 +29,9 @@ My name is <ins>Vít Frolík</ins> and I am a second-year student at a high scho
 3. Then type this: `java -jar Tajemstvi_opusteneho_hradu_VF.jar` and press enter game should start😀.
 
 ### **👾 Usefull Commands**
-1. For moving between rooms`jdi`
-2. For talking with characters`mluv`
-3. For showing game map`map`
+1. For moving between rooms `jdi`
+2. For talking with characters `mluv`
+3. For showing game map `map`
 4. For using items `pouzij`
 5. For searching items `prozkoumej`
 6. For showing inventory `inventar`
